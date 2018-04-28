@@ -62,7 +62,7 @@ War files can be deployed by add them to the $CATALINA_HOME/webapps directory. I
 docker run -d --name sample-tomcat -p 8080:8080 -v $PWD/wars/sample.war:/opt/tomcat/webapps/sample.war tom8
 ```
 
-Go to [0.0.0.0:8080/sample](0.0.0.0:8080/sample) on your web browser:
+Go to [ http://0.0.0.0:8080/sample ](http://0.0.0.0:8080/sample) on your web browser:
 
 ### For troubleshooting and/or more info:
 [ The Official Docker Image ](https://github.com/docker-library/tomcat) for Tomcat is also available.
