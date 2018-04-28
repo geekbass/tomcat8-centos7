@@ -37,7 +37,9 @@ You can also volume and port args to mount custom configs, wars, and ssl 8443. E
 ```
 
 ### SSL Using APR
-Be sure to add the SSL connector to the server.xml [ Tomcat 8 SSL Settings ] (https://tomcat.apache.org/tomcat-8.5-doc/ssl-howto.html)
+Be sure to add the SSL connector to the server.xml 
+[ Tomcat 8 SSL Settings ](https://tomcat.apache.org/tomcat-8.5-doc/ssl-howto.html)
+
 ```sh
 <Connector
            protocol="org.apache.coyote.http11.Http11AprProtocol"
