@@ -55,11 +55,20 @@ Mount the cert and the key from the host with port 8443 as well as the server.xm
 docker run -d --name my-tom8 -p 8080:8080 -p 8443:8443 -v /host-path/ssl/server.crt:/opt/tomcat/ssl/server.crt -v /host-path/ssl/server.pem:/opt/tomcat/ssl/server.pem -v /host-path/server.xml:/opt/tomcat/conf/server.xml tom8
 ```
 
+### Add War files
+War files can be deployed by add them to the $CATALINA_HOME/webapps directory. Included webapps/sample.war to test out. See [ Tomcat Web App Example ](https://tomcat.apache.org/tomcat-8.5-doc/appdev/sample/) for more info.
+
+```sh 
+docker run -d --name sample-tomcat -p 8080:8080 -v $PWD/wars/sample.war:/opt/tomcat/webapps/sample.war tom8
+```
+
+Go to [0.0.0.0:8080/sample](0.0.0.0:8080/sample) on your web browser:
+
 ### For troubleshooting and/or more info:
 [ The Official Docker Image ](https://github.com/docker-library/tomcat) for Tomcat is also available.
 
 # To Do:
 - GPG checks 
 - sha check JCE 
-- Shrink the Image!!!!
+- Shrink the Image if possible. Its a monster.
 - ? 
